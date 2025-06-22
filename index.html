@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Engineering Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom CSS */
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .project-card:hover {
+            transform: translateY(-10px);
+            transition: transform 0.3s ease;
+        }
+        .skill-bar {
+            height: 6px;
+            border-radius: 3px;
+        }
+        .typewriter {
+            overflow: hidden;
+            border-right: .15em solid #3b82f6;
+            white-space: nowrap;
+            animation: 
+                typing 3.5s steps(40, end),
+                blink-caret .75s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #3b82f6 }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans">
+    <!-- Navigation -->
+    <nav class="glass-effect fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="text-2xl font-bold gradient-text">CE Portfolio</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 transition">Home</a>
+                        <a href="#about" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 transition">About</a>
+                        <a href="#projects" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 transition">Projects</a>
+                        <a href="#skills" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 transition">Skills</a>
+                        <a href="#contact" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 transition">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="p-2 rounded-md hover:bg-gray-700 focus:outline-none">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700 transition">Home</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700 transition">About</a>
+                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700 transition">Projects</a>
+                <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700 transition">Skills</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+<section id="home" class="pt-24 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="flex flex-col md:flex-row items-center justify-between">
+        <div class="md:w-1/2 mb-10 md:mb-0">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4">
+                Hi, I'm <span class="gradient-text">Devashree Pate</span>
+            </h1>
+            <div class="typewriter text-xl md:text-2xl mb-6">
+                Full Stack & Flutter Developer | CS Engineer
+            </div>
+            <p class="text-gray-300 mb-8 text-lg">
+                I'm passionate about building responsive, user-centric web and mobile apps. With skills in Django, Flutter, and MySQL, I aim to create meaningful tech solutions.
+            </p>
+            <div class="flex space-x-4">
+                <a href="#contact" class="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-medium hover:opacity-90 transition">Contact Me</a>
+                <a href="#projects" class="px-6 py-3 border border-gray-600 rounded-lg font-medium hover:bg-gray-800 transition">View Projects</a>
+            </div>
+        </div>
+        <div class="md:w-1/2 flex justify-center">
+            <div class="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
+                <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full opacity-20 blur-xl"></div>
+                <div class="relative flex items-center justify-center w-full h-full">
+                    <img src="photo.jpg" 
+                         alt="Devashree Pate" 
+                         class="rounded-full object-cover w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 border-4 border-gray-700">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- About Section -->
+<section id="about" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-gray-800 rounded-xl">
+    <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-2 gradient-text">About Me</h2>
+        <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
+    </div>
+    <div class="flex flex-col md:flex-row items-center gap-10">
+        <div class="md:w-1/3">
+            <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1171&q=80" 
+                 alt="About Devashree" 
+                 class="rounded-lg shadow-xl w-full h-auto">
+        </div>
+        <div class="md:w-2/3">
+            <h3 class="text-2xl font-semibold mb-4">A Little About Myself</h3>
+            <p class="text-gray-300 mb-6">
+                I'm a third-year Computer Engineering student at Zeal College of Engineering and Research, Pune. I love developing full-stack websites and mobile apps that solve real-world problems.
+            </p>
+            <p class="text-gray-300 mb-6">
+                I’m experienced with Django, Flask, Flutter, and MySQL. I’ve built several projects and also completed certifications to expand my skill set.
+            </p>
+            <div class="grid grid-cols-2 gap-6">
+<div>
+    <div class="flex items-center mb-2">
+        <i class="fas fa-university text-blue-400 mr-2"></i>
+        <h4 class="font-medium">Education</h4>
+    </div>
+    <p class="text-gray-400 text-sm">
+        <strong>Bachelor of Engineering (Computer Science)</strong><br>
+        Zeal College of Engineering and Research, Pune<br>
+        <span class="text-gray-500">(2022 – Present)</span><br>
+        <span class="text-gray-400">Current CGPA: 8.9/10</span>
+    </p>
+    <p class="text-gray-400 text-sm mt-4">
+        <strong>HSC – Science</strong><br>
+        Mahatma Phule International School and Junior College, Pune<br>
+        <span class="text-gray-500">(2020 – 2022)</span><br>
+        <span class="text-gray-400">Percentage: 77.23%</span>
+    </p>
+    <p class="text-gray-400 text-sm mt-4">
+        <strong>SSC</strong><br>
+        Dr. Kalmadi Shamarao High School, Pune<br>
+        <span class="text-gray-500">(2010 – 2020)</span><br>
+        <span class="text-gray-400">Percentage: 94.60%</span>
+    </p>
+</div>
+
+
+                <div>
+                    <div class="flex items-center mb-2">
+                        <i class="fas fa-code text-purple-400 mr-2"></i>
+                        <h4 class="font-medium">Focus Areas</h4>
+                    </div>
+                    <p class="text-gray-400 text-sm">Full Stack Dev<br>Flutter, AI, Data Analysis</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Projects Section -->
+<section id="projects" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-2 gradient-text">My Projects</h2>
+        <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Project 1: Pizza Ordering System -->
+        <div class="glass-effect rounded-xl p-6 project-card shadow-lg">
+            <div class="bg-gray-800 rounded-lg p-4 mb-4 flex items-center justify-center">
+                <i class="fas fa-pizza-slice text-4xl text-yellow-400"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Pizza Ordering System</h3>
+            <p class="text-gray-400 mb-4">
+                A Java-based CLI application with MySQL integration to manage pizza orders, customer info, and billing.
+            </p>
+            <div class="flex flex-wrap gap-2">
+                <span class="px-2 py-1 bg-gray-800 text-xs rounded">Java</span>
+                <span class="px-2 py-1 bg-gray-800 text-xs rounded">MySQL</span>
+                <span class="px-2 py-1 bg-gray-800 text-xs rounded">JDBC</span>
+            </div>
+        </div>
+
+        <!-- Project 2: Electroplating Website -->
+        <div class="glass-effect rounded-xl p-6 project-card shadow-lg">
+            <div class="bg-gray-800 rounded-lg p-4 mb-4 flex items-center justify-center">
+                <i class="fas fa-industry text-4xl text-purple-400"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Electroplating Business Website</h3>
+            <p class="text-gray-400 mb-4">
+                Built a professional website for Vrushali Industries with Django backend, interactive gallery, and animations.
+            </p>
+            <div class="flex flex-wrap gap-2">
+                <span class="px-2 py-1 bg-gray-800 text-xs rounded">HTML</span>
+                <span class="px-2 py-1 bg-gray-800 text-xs rounded">CSS</span>
+                <span class="px-2 py-1 bg-gray-800 text-xs rounded">Django</span>
+            </div>
+        </div>
+
+        <!-- Project 3: Discover Bharat -->
+        <div class="glass-effect rounded-xl p-6 project-card shadow-lg">
+            <div class="bg-gray-800 rounded-lg p-4 mb-4 flex items-center justify-center">
+                <i class="fas fa-map-marked-alt text-4xl text-green-400"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Discover Bharat</h3>
+            <p class="text-gray-400 mb-4">
+                A static tourism website showcasing Indian destinations with cultural highlights and regional content.
+            </p>
+            <div class="flex flex-wrap gap-2">
+                <span class="px-2 py-1 bg-gray-800 text-xs rounded">HTML</span>
+                <span class="px-2 py-1 bg-gray-800 text-xs rounded">CSS</span>
+            </div>
+        </div>
+
+        <!-- Project 4: Weather App -->
+        <div class="glass-effect rounded-xl p-6 project-card shadow-lg">
+            <div class="bg-gray-800 rounded-lg p-4 mb-4 flex items-center justify-center">
+                <i class="fas fa-cloud-sun-rain text-4xl text-blue-400"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Weather App</h3>
+            <p class="text-gray-400 mb-4">
+                A Flutter-based mobile application to show real-time weather using location-based API data.
+            </p>
+            <div class="flex flex-wrap gap-2">
+                <span class="px-2 py-1 bg-gray-800 text-xs rounded">Flutter</span>
+                <span class="px-2 py-1 bg-gray-800 text-xs rounded">Dart</span>
+                <span class="px-2 py-1 bg-gray-800 text-xs rounded">API</span>
+            </div>
+        </div>
+
+        <!-- Project 5: Coffee Sales Analysis -->
+<div class="glass-effect rounded-xl p-6 project-card shadow-lg">
+    <div class="bg-gray-800 rounded-lg p-4 mb-4 flex items-center justify-center">
+        <i class="fas fa-chart-bar text-4xl text-purple-400"></i>
+    </div>
+    <h3 class="text-xl font-semibold mb-2">Coffee Sales Analysis</h3>
+    <p class="text-gray-400 mb-4">
+        Analyzed a dataset of coffee sales across Saudi Arabia (2023–2024) to identify top-selling products and customer buying patterns. Visualized regional performance, price distribution, and sales trends using bar plots and heatmaps.
+    </p>
+    <div class="flex flex-wrap gap-2">
+        <span class="px-2 py-1 bg-gray-800 text-xs rounded">Python</span>
+        <span class="px-2 py-1 bg-gray-800 text-xs rounded">Pandas</span>
+        <span class="px-2 py-1 bg-gray-800 text-xs rounded">Matplotlib</span>
+        <span class="px-2 py-1 bg-gray-800 text-xs rounded">Seaborn</span>
+    </div>
+</div>
+
+<!-- Project 6: Titanic Fare Distribution Analysis -->
+<div class="glass-effect rounded-xl p-6 project-card shadow-lg">
+    <div class="bg-gray-800 rounded-lg p-4 mb-4 flex items-center justify-center">
+        <i class="fas fa-ship text-4xl text-blue-400"></i>
+    </div>
+    <h3 class="text-xl font-semibold mb-2">Titanic Fare Distribution Analysis</h3>
+    <p class="text-gray-400 mb-4">
+        Explored the Titanic dataset to understand fare distribution among different passenger classes. Created insightful visualizations using Seaborn to highlight pricing patterns and class distinctions.
+    </p>
+    <div class="flex flex-wrap gap-2">
+        <span class="px-2 py-1 bg-gray-800 text-xs rounded">Python</span>
+        <span class="px-2 py-1 bg-gray-800 text-xs rounded">Seaborn</span>
+    </div>
+</div>
+
+
+    </div>
+</section>
+
+
+    <!-- Skills Section -->
+<section id="skills" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-gray-800 rounded-xl">
+    <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-2 gradient-text">Technical Skills</h2>
+        <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <!-- Programming Languages -->
+        <div>
+            <h3 class="text-xl font-semibold mb-6 flex items-center">
+                <i class="fas fa-code mr-2 text-blue-400"></i>
+                Programming Languages
+            </h3>
+            <div class="mb-4">
+                <div class="flex justify-between mb-1">
+                    <span>Python</span>
+                    <span>90%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2">
+                    <div class="bg-blue-500 h-2 rounded-full" style="width: 90%"></div>
+                </div>
+            </div>
+            <div class="mb-4">
+                <div class="flex justify-between mb-1">
+                    <span>Java</span>
+                    <span>85%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2">
+                    <div class="bg-blue-500 h-2 rounded-full" style="width: 85%"></div>
+                </div>
+            </div>
+            <div class="mb-4">
+                <div class="flex justify-between mb-1">
+                    <span>C++</span>
+                    <span>90%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2">
+                    <div class="bg-blue-500 h-2 rounded-full" style="width: 90%"></div>
+                </div>
+            </div>
+            <div class="mb-4">
+                <div class="flex justify-between mb-1">
+                    <span>PHP</span>
+                    <span>65%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2">
+                    <div class="bg-blue-500 h-2 rounded-full" style="width: 65%"></div>
+                </div>
+            </div>
+            <div class="mb-4">
+                <div class="flex justify-between mb-1">
+                    <span>HTML / CSS</span>
+                    <span>90%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2">
+                    <div class="bg-blue-500 h-2 rounded-full" style="width: 90%"></div>
+                </div>
+            </div>
+            <div class="mb-4">
+                <div class="flex justify-between mb-1">
+                    <span>JavaScript</span>
+                    <span>75%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2">
+                    <div class="bg-blue-500 h-2 rounded-full" style="width: 75%"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technologies & Tools -->
+        <div>
+            <h3 class="text-xl font-semibold mb-6 flex items-center">
+                <i class="fas fa-tools mr-2 text-purple-400"></i>
+                Frameworks & Tools
+            </h3>
+            <div class="mb-4">
+                <div class="flex justify-between mb-1">
+                    <span>Django / Flask</span>
+                    <span>85%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2">
+                    <div class="bg-purple-500 h-2 rounded-full" style="width: 85%"></div>
+                </div>
+            </div>
+            <div class="mb-4">
+                <div class="flex justify-between mb-1">
+                    <span>Flutter</span>
+                    <span>70%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2">
+                    <div class="bg-purple-500 h-2 rounded-full" style="width: 70%"></div>
+                </div>
+            </div>
+            <div class="mb-4">
+                <div class="flex justify-between mb-1">
+                    <span>Bootstrap / WordPress</span>
+                    <span>70%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2">
+                    <div class="bg-purple-500 h-2 rounded-full" style="width: 70%"></div>
+                </div>
+            </div>
+            <div class="mb-4">
+                <div class="flex justify-between mb-1">
+                    <span>MySQL / SQL</span>
+                    <span>85%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2">
+                    <div class="bg-purple-500 h-2 rounded-full" style="width: 85%"></div>
+                </div>
+            </div>
+            <div class="mb-4">
+                <div class="flex justify-between mb-1">
+                    <span>Pandas / Matplotlib / Seaborn</span>
+                    <span>85%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2">
+                    <div class="bg-purple-500 h-2 rounded-full" style="width: 85%"></div>
+                </div>
+            </div>
+            <div class="mb-4">
+                <div class="flex justify-between mb-1">
+                    <span>VS Code / Android Studio / GitHub</span>
+                    <span>90%</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-2">
+                    <div class="bg-purple-500 h-2 rounded-full" style="width: 90%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-2 gradient-text">Get In Touch</h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
+        </div>
+        <div class="flex flex-col md:flex-row gap-12">
+            <div class="md:w-1/2">
+                <h3 class="text-2xl font-semibold mb-6">Let's Connect!</h3>
+                <p class="text-gray-300 mb-8">
+                    I'm always open to discussing new projects, creative ideas, or opportunities to be 
+                    part of your vision. Feel free to reach out through any of the channels below.
+                </p>
+                <!-- Email -->
+<div class="space-y-6">
+    <!-- Phone -->
+<div class="flex items-center">
+    <div class="bg-purple-500 rounded-full p-3 mr-4">
+        <i class="fas fa-phone text-white"></i>
+    </div>
+    <div>
+        <h4 class="font-medium">Phone</h4>
+        <a href="tel:+919022902700" class="text-blue-400 hover:underline">+91 90229 02700</a>
+
+    </div>
+</div>
+
+    <div class="flex items-center">
+        <div class="bg-blue-500 rounded-full p-3 mr-4">
+            <i class="fas fa-envelope text-white"></i>
+        </div>
+        <div>
+            <h4 class="font-medium">Email</h4>
+            <a href="mailto:devashreepate@gmail.com" class="text-blue-400 hover:underline">devashreepate@gmail.com</a>
+        </div>
+    </div>
+    <div class="flex items-center">
+        <div class="bg-purple-500 rounded-full p-3 mr-4">
+            <i class="fab fa-github text-white"></i>
+        </div>
+        <div>
+            <h4 class="font-medium">GitHub</h4>
+            <a href="https://github.com/devashreepate" target="_blank" class="text-blue-400 hover:underline">github.com/devashreepate</a>
+        </div>
+    </div>
+    <div class="flex items-center">
+        <div class="bg-blue-500 rounded-full p-3 mr-4">
+            <i class="fab fa-linkedin-in text-white"></i>
+        </div>
+        <div>
+            <h4 class="font-medium">LinkedIn</h4>
+            <a href="https://linkedin.com/in/devashree-pate-370566314" target="_blank" class="text-blue-400 hover:underline">linkedin.com/in/devashree-pate-370566314</a>
+        </div>
+    </div>
+</div>
+
+
+</div>        
+    <div class="md:w-1/2">
+        <form action="https://formsubmit.co/devashreepate@gmail.com" method="POST" class="space-y-6">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="thankyou.html">
+
+    <div>
+        <label for="name" class="block text-sm font-medium mb-1">Name</label>
+        <input type="text" name="name" id="name" required class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg">
+    </div>
+    <div>
+        <label for="email" class="block text-sm font-medium mb-1">Email</label>
+        <input type="email" name="email" id="email" required class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg">
+    </div>
+    <div>
+        <label for="subject" class="block text-sm font-medium mb-1">Subject</label>
+        <input type="text" name="subject" id="subject" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg">
+    </div>
+    <div>
+        <label for="message" class="block text-sm font-medium mb-1">Message</label>
+        <textarea name="message" id="message" rows="4" required class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg"></textarea>
+    </div>
+    <button type="submit" class="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-medium hover:opacity-90 transition w-full">
+        Send Message
+    </button>
+</form>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-gray-800">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-6 md:mb-0">
+                <a href="#" class="text-2xl font-bold gradient-text">CE Portfolio</a>
+                <p class="text-gray-400 mt-2">Computer Engineering Student | 2023</p>
+            </div>
+            <div class="flex space-x-6">
+    <!-- Phone Icon -->
+    <a href="tel:+919022902700" class="text-gray-400 hover:text-white transition" title="Call Me">
+        <i class="fas fa-phone text-xl"></i>
+    </a>
+
+    <!-- GitHub Icon -->
+    <a href="https://github.com/devashreepate" target="_blank" class="text-gray-400 hover:text-white transition" title="GitHub">
+        <i class="fab fa-github text-xl"></i>
+    </a>
+
+    <!-- LinkedIn Icon -->
+    <a href="https://linkedin.com/in/devashree-pate-370566314" target="_blank" class="text-gray-400 hover:text-white transition" title="LinkedIn">
+        <i class="fab fa-linkedin-in text-xl"></i>
+    </a>
+
+    <!-- Email Icon -->
+    <a href="mailto:devashreepate@gmail.com" class="text-gray-400 hover:text-white transition" title="Email Me">
+        <i class="fas fa-envelope text-xl"></i>
+    </a>
+</div>
+
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Typewriter effect after animation
+        setTimeout(() => {
+            const typewriter = document.querySelector('.typewriter');
+            typewriter.style.borderRight = 'none';
+        }, 3500);
+    </script>
+</body>
+</html>
